@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+    <div class="scoreboard">
+      <span id="score-x">Yasir: 0</span>
+      <span id="score-o">Sayyed: 0</span>
+    </div>
+    <div id="board" class="board"></div>
+    <div id="status" class="status">Yasir's turn</div>
+    <button id="reset">Reset Game</button>
+  </div>
+  <footer>Made with ❤️ by Skillcraft</footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #a7c7e7 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #2d3a4b;
+  letter-spacing: 2px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #3b4a5a;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  margin: 1.5rem auto;
+}
+
+.cell {
+  background: #e3eafc;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  color: #2d3a4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(60, 60, 120, 0.08);
+}
+
+.cell:hover {
+  background: #c7d2fe;
+  transform: scale(1.05);
+}
+
+.status {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+button#reset {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button#reset:hover {
+  background: #1e40af;
+}
+
+footer {
+  margin-top: 2rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+</style>
